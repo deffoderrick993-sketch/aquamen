@@ -1,0 +1,108 @@
+/* AQUAMEN Admin Styling - Clean Solid Color Theme (No Gradients) */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+:root {
+  --admin-cyan: #54b7e9;
+  --admin-dark-blue: #0b1a26;
+  --admin-card-bg: #ffffff;
+  --admin-border: #e2e8f0;
+}
+
+/* Solid Cards */
+.card-magic {
+  background: var(--admin-card-bg);
+  border: 1px solid var(--admin-border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card-magic:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(84, 183, 233, 0.2);
+  border-color: var(--admin-cyan) !important;
+}
+
+/* Solid Icon Box */
+.icon-magic {
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  background: #54b7e9;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.card-magic:hover .icon-magic {
+  transform: scale(1.08);
+}
+
+/* Solid Welcome Banner */
+.welcome-banner-magic {
+  background: #0b1a26;
+  border-radius: 14px;
+  padding: 32px;
+  color: #ffffff;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(11, 26, 38, 0.15);
+  border-left: 5px solid #54b7e9;
+}
+
+/* Solid Action Button */
+.btn-magic {
+  background: #54b7e9 !important;
+  color: #0b1a26 !important;
+  border: none !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-magic:hover {
+  background: #3fa5d8 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* Sidebar Solid Custom Styling */
+.sidebar[data-background-color="dark"] {
+  background: #0b1a26 !important;
+}
+
+.sidebar .nav-secondary > .nav-item.active > a {
+  background: #54b7e9 !important;
+  color: #0b1a26 !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+}
+
+.sidebar .nav-secondary > .nav-item > a:hover {
+  background: #152d3f !important;
+  border-radius: 8px !important;
+  color: #54b7e9 !important;
+}
+
+/* Form Solid Input */
+.form-control-magic {
+  border-radius: 8px !important;
+  border: 1px solid #cbd5e1 !important;
+  padding: 12px 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+.form-control-magic:focus {
+  border-color: #54b7e9 !important;
+  box-shadow: 0 0 0 3px rgba(84, 183, 233, 0.25) !important;
+}
+
+.shimmer-text {
+  color: #ffffff;
+  font-weight: 700;
+}
