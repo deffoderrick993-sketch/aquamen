@@ -15,6 +15,14 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
+// Liaison automatique du dossier public_html sur hébergement cPanel
+$possiblePublicHtml = dirname(__DIR__) . '/../public_html';
+if (is_dir($possiblePublicHtml)) {
+    $app->usePublicPath(realpath($possiblePublicHtml));
+} elseif (is_dir(dirname(__DIR__) . '/public_html')) {
+    $app->usePublicPath(realpath(dirname(__DIR__) . '/public_html'));
+}
+
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces

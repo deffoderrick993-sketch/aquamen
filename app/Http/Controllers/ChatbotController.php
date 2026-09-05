@@ -57,7 +57,7 @@ class ChatbotController extends Controller
                 'Contact'
             ];
         } elseif ($this->containsAny($userMessage, ['bénévole', 'benevole', 'volontaire', 'rejoindre', 'membre', 'participer', 'stage', 'recrutement'])) {
-            $reply = "🤝 **Devenir Bénévole chez AQUAMEN**<br><br>Vous souhaitez vous engager pour la préservation des océans et des écosystèmes aquatiques ? Nous accueillons des passionnés de la nature, chercheurs et étudiants !<br><br><a href='" . route('volontariat') . "' class='btn btn-sm text-dark mt-2' style='background: #54b7e9; font-weight: 600;'><i class='bi bi-person-plus-fill me-1'></i>Postuler au volontariat</a>";
+            $reply = "🤝 **Devenir Bénévole chez AQUAMEN**<br><br>Vous souhaitez vous engager pour la préservation marine ? Les candidatures se font **exclusivement par appel téléphonique** pour échanger de vive voix sur vos motivations.<br><br><a href='tel:+237697497892' class='btn btn-sm text-dark mt-2 me-2' style='background: #54b7e9; font-weight: 600;'><i class='bi bi-telephone-fill me-1'></i>Appeler le +237 697 49 78 92</a><a href='" . route('volontariat') . "' class='btn btn-sm btn-outline-info mt-2'>En savoir plus</a>";
             $suggestions = [
                 'Qui sommes-nous ?',
                 'Nos projets & recherches',

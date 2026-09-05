@@ -70,42 +70,43 @@
 
           <div class="col-lg-6">
             <div class="p-4 rounded shadow" style="background: var(--surface-color); border: 1px solid rgba(205, 164, 94, 0.3);">
-              <h3 style="color: var(--accent-color); font-family: var(--heading-font);" class="mb-4">Postuler au Bénévolat</h3>
+              <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style="background: rgba(84, 183, 233, 0.15); border: 1px solid #54b7e9; color: #54b7e9; font-size: 13px; font-weight: 600;">
+                <i class="bi bi-telephone-fill"></i> Candidature par appel téléphonique uniquement
+              </div>
+
+              <h3 style="color: var(--accent-color); font-family: var(--heading-font);" class="mb-3">Comment Postuler ?</h3>
               
-              @if(session('success'))
-                <div class="alert alert-success border-0 mb-3" style="background: rgba(84, 183, 233, 0.2); color: #fff; border-left: 4px solid #54b7e9 !important; font-size: 14px;">
-                  <i class="bi bi-check-circle-fill me-2 text-info"></i>{{ session('success') }}
-                </div>
-              @endif
+              <p style="color: var(--default-color); line-height: 1.8; font-size: 15px;">
+                Pour rejoindre l'équipe de bénévoles d'AQUAMEN, <strong>aucun formulaire écrit n'est requis</strong>. Nous privilégions le contact humain direct pour échanger sur votre profil, vos motivations et vos disponibilités de terrain.
+              </p>
 
-              @if ($errors->any())
-                <div class="alert alert-danger border-0 mb-3" style="background: rgba(231, 29, 54, 0.2); color: #fff; border-left: 4px solid #e71d36 !important; font-size: 14px;">
-                  <ul class="mb-0 ps-3">
-                    @foreach ($errors->all() as $error)
-                      <li>{{ $error }}</li>
-                    @endforeach
-                  </ul>
+              <div class="my-4 p-4 rounded text-center" style="background: rgba(255,255,255,0.03); border: 1px dashed var(--accent-color);">
+                <p class="mb-2 text-white-50" style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Contactez directement notre coordination :</p>
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                  <a href="tel:+237697497892" class="h3 fw-bold text-decoration-none" style="color: var(--accent-color); font-family: var(--heading-font);">
+                    <i class="bi bi-telephone-outbound-fill me-2 fs-4"></i>+237 697 49 78 92
+                  </a>
                 </div>
-              @endif
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                  <a href="tel:+237697497892" class="btn px-4 py-2" style="background: var(--accent-color); color: #000; font-weight: 700; border-radius: 50px;">
+                    <i class="bi bi-telephone-fill me-2"></i>Appeler maintenant
+                  </a>
+                  <a href="https://wa.me/237697497892?text=Bonjour,%20je%20souhaite%20proposer%20ma%20candidature%20comme%20bénévole%20pour%20AQUAMEN." target="_blank" class="btn px-4 py-2" style="background: #25D366; color: #fff; font-weight: 700; border-radius: 50px;">
+                    <i class="bi bi-whatsapp me-2"></i>WhatsApp
+                  </a>
+                </div>
+              </div>
 
-              <form action="{{ route('volontariat.apply') }}" method="post">
-                @csrf
-                <div class="mb-3">
-                  <input type="text" name="name" class="form-control p-3" placeholder="Votre Nom et Prénom *" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--accent-color); color: #fff;" value="{{ old('name') }}">
+              <div class="pt-3" style="border-top: 1px solid rgba(205, 164, 94, 0.2); font-size: 14px; color: var(--default-color);">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-clock me-2" style="color: var(--accent-color);"></i>
+                  <span><strong>Disponibilité :</strong> Du lundi au samedi, 08h00 - 18h00</span>
                 </div>
-                <div class="mb-3">
-                  <input type="email" name="email" class="form-control p-3" placeholder="Votre Adresse E-mail *" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--accent-color); color: #fff;" value="{{ old('email') }}">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-geo-alt me-2" style="color: var(--accent-color);"></i>
+                  <span><strong>Base :</strong> BOCOM, Entrée Elécam, Kribi - Cameroun</span>
                 </div>
-                <div class="mb-3">
-                  <input type="text" name="phone" class="form-control p-3" placeholder="Votre Téléphone (Optionnel)" style="background: rgba(255,255,255,0.05); border: 1px solid var(--accent-color); color: #fff;" value="{{ old('phone') }}">
-                </div>
-                <div class="mb-3">
-                  <textarea name="message" rows="4" class="form-control p-3" placeholder="Expliquez-nous comment vous souhaitez contribuer à AQUAMEN..." required style="background: rgba(255,255,255,0.05); border: 1px solid var(--accent-color); color: #fff;">{{ old('message') }}</textarea>
-                </div>
-                <button type="submit" class="btn w-100 p-3 shadow-sm" style="background: var(--accent-color); color: #000; font-weight: 700; border-radius: 50px;">
-                  <i class="bi bi-send-fill me-2"></i>Envoyer ma Candidature
-                </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>
